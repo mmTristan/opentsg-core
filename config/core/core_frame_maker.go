@@ -98,7 +98,6 @@ func FrameWidgetsGenerator(c context.Context, pos int, debug bool) (context.Cont
 		}
 	}
 
-
 	// Metadata update of the base widget
 	for k, wc := range bases.generatedFrameWidgets {
 		// if it is widget to be updated

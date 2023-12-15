@@ -1,0 +1,8 @@
+{
+  "type": "builtin.addimage",
+  "image": "../../tsg.rc/mi-mrmxf-b1000.png",
+  "imageFill": "xy scale",
+  "grid": {
+    "location": "p0"
+  }
+}

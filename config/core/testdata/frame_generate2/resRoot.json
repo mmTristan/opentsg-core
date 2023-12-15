@@ -1,0 +1,46 @@
+{
+    "w-frame.l-canvas": {
+        "filedepth": 16,
+        "frameSize": {
+            "h": 1080,
+            "w": 1920
+        },
+        "gridColumns": 16,
+        "gridRows": 9,
+        "linewidth": 0.5,
+        "name": [
+            "t07-macro-widgets{{framenumber}}.png"
+        ],
+        "type": "builtin.canvasoptions"
+    },
+    "w-frame.l-heading": {
+        "backgroundcolor": "#ffffff",
+        "bordercolor": "#C2A649",
+        "bordersize": 3,
+        "font": "header",
+        "grid": {
+            "location": "c1:n1"
+        },
+        "text": [
+            "t07-macro-widgets"
+        ],
+        "textcolor": "#C2A649",
+        "type": "builtin.textbox"
+    },
+    "w-frame.l-logoMrMxf": {
+        "grid": {
+            "location": "p0"
+        },
+        "image": "../../tsg.rc/mi-mrmxf-b1000.png",
+        "imageFill": "xy scale",
+        "type": "builtin.addimage"
+    },
+    "w-frame.l-logoTsg": {
+        "grid": {
+            "location": "a0"
+        },
+        "image": "../../tsg.rc/logo-msgtsg.png",
+        "imageFill": "xy scale",
+        "type": "builtin.addimage"
+    }
+}

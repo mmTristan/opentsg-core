@@ -215,4 +215,63 @@ func TestYamlRead(t *testing.T) {
 			})
 		})
 	}
+
+	newDesignBruce := "./testdata/brucedemo/_main.json"
+	cYamlBruce, _, e := FileImport(newDesignBruce, "", false)
+	predictedValuesBruce := []string{"./testdata/frame_generate2/results/resRoot.yaml"}
+	fmt.Println(e, "input error")
+
+	for i, pv := range predictedValuesBruce {
+		n, es := FrameWidgetsGenerator(cYamlBruce, i, false)
+		fmt.Println(es, "second erro")
+		expec, got := genHash(n, pv)
+		bar := n.Value(baseKey).(map[string]widgetContents)
+
+		frameJSON := make(map[string]map[string]any)
+
+		for k, v := range bar {
+			if v.Data != nil { // fill the ones with actual data
+				var m map[string]any
+				yaml.Unmarshal(v.Data, &m)
+				frameJSON[k] = m
+			}
+		}
+
+		fmt.Printf("\n\n\n")
+		fmt.Println(frameJSON, "end")
+
+		b, _ := json.MarshalIndent(frameJSON, "", "    ")
+		res, _ := os.Create("./testdata/frame_generate2/resRoot.json")
+		res.Write(b)
+
+		Convey("Checking arguments are parsed correctly into base widgets, so widgets with declared args are updated", t, func() {
+			Convey(fmt.Sprintf("Using frame %v ./testdata/RootMustache.json as the input ", i), func() {
+				Convey("The generated widget map as a json body matches "+pv, func() {
+					So(expec.Sum(nil), ShouldResemble, got.Sum(nil))
+				})
+			})
+		})
+	}
+
+}
+
+
+func TestSearchOrder(t *testing.T) {
+
+	/*
+	
+	tests to run 
+	- the current search order
+	- test the LastInFirst out
+	- check working directory
+	
+	hash the bytes of the expected body file
+
+	test set up
+
+	make some files in a folder system. Give a bunch of paths
+	as path parents
+	
+	*/
+	
 }

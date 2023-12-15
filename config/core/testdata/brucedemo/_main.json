@@ -1,0 +1,28 @@
+{
+  "documentation": [
+    "# t07-macro-widgets - an **opentsg-lab** project",
+    "",
+    "from [opentsg.io](https://opentsg.io) with [JupyterLab](https://jupyter.org/)"
+  ],
+  "include": [
+    {
+      "uri": "l-templateTutorials.json",
+      "name": "w-frame",
+      "args": [
+        "title"
+      ]
+    }
+  ],
+  "create": [
+    {
+      "w-frame": {
+        "title": "t07-macro-widgets"
+      }
+    },
+    {
+      "w-frame": {
+        "title": "frame2"
+      }
+    }
+  ]
+}

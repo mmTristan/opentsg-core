@@ -1,0 +1,14 @@
+{
+  "type": "builtin.textbox",
+  "text": [
+    "{{title}}"
+  ],
+  "font": "header",
+  "textcolor": "#C2A649",
+  "bordercolor": "#C2A649",
+  "backgroundcolor": "#ffffff",
+  "bordersize": 3,
+  "grid": {
+    "location": "c1:n1"
+  }
+}

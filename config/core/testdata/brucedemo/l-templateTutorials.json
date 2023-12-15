@@ -1,0 +1,45 @@
+{
+  "documentation": [
+    "OpenTsg tutorials - macro widgets",
+    " - An intermediate macro",
+    " - The template for tutorial08+"
+  ],
+  "include": [
+    {
+      "uri": "l-canvas.json",
+      "name": "l-canvas",
+      "args": [
+        "title"
+      ]
+    },
+    {
+      "uri": "l-heading.json",
+      "name": "l-heading",
+      "args": [
+        "title"
+      ]
+    },
+    {
+      "uri": "l-logoTsg.json",
+      "name": "l-logoTsg",
+      "args": []
+    },
+    {
+      "uri": "l-logoMrMxf.json",
+      "name": "l-logoMrMxf",
+      "args": []
+    }
+  ],
+  "create": [
+    {
+      "l-canvas": {
+    
+      },
+      "l-heading": {
+     
+      },
+      "l-logoTsg": {},
+      "l-logoMrMxf": {}
+    }
+  ]
+}
